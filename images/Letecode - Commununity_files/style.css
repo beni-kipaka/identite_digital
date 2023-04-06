@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    border: 0;
+    list-style: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15%;
+    height: 75px;
+    line-height: 75px;
+    background: #0F2243;
+}
+
+nav .logo-brand{
+    display: flex;
+}
+
+nav .logo-brand a{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+nav img{
+    width: 80px;
+    height: 80px;
+}
+
+nav .nav-list{
+    display: flex;
+}
+
+nav .nav-list .nav-item{
+    cursor: pointer;
+    height: 100%;
+    padding: 0 30px;
+    transition: .4s;
+}
+
+nav .nav-list .nav-item .nav-link{
+    color: #fff;
+    font-size: 18px;
+}
+
+nav .nav-list .nav-item .nav-link:hover{
+    font-weight: 500;
+    border-bottom: 2px solid #fff;
+    transition: .2s;
+    
+}
+
+
+
+/* NAVBAR TOGGLER */
+nav .navbar-toggler{
+    display: none;
+    height: min-content;
+    margin: 18px -10px 0 0;
+    cursor: pointer;
+}
+
+nav .navbar-toggler .bar{
+    width: 35px;
+    height: 3px;
+    margin-bottom: 7px;
+    background: #fff;
+    border-radius: 10%;
+    transition: .4s;
+}
+
+input{
+    display: none;
+}
+
+input:checked ~ nav .nav-list {
+    transform: translateY(0);
+}
+
+input:checked ~ nav .navbar-toggler{
+    margin-top: 35px;
+}
+
+input:checked ~ nav .navbar-toggler .bar:nth-child(1){
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+input:checked ~ nav .navbar-toggler .bar:nth-child(2){
+    display: none;
+}
+
+input:checked ~ nav .navbar-toggler .bar:nth-child(3){
+    transform: rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIAS QUERIES */
+
+@media screen and (max-width: 935px) {
+    nav{
+        padding: 0 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 675px) {
+    nav .nav-list{
+        display: grid;
+        position: absolute;
+        background: #0F2243;
+        width: 100%;
+        top: 75px;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: -1;
+        transform: .6s;
+    }
+
+    nav .nav-list .nav-item{
+        padding-left: 35px;
+    }
+
+    nav .navbar-toggler{
+        display: grid !important;
+    }
+}
+
+
+
+
+
